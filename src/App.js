@@ -1,12 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App h-[100vh] w-full">
+    return (
+        <div className="App h-[100vh] w-full bg-[url('assets/image/Bg.png')] flex items-center justify-center">
 
-    </div>
-  );
+          <section className="w-[70%] h-[700px] bg-white rounded-[20px] bg-[url('assets/image/SecBg.png')] bg-cover border-2 border-white shadow-xl">
+
+          </section>
+
+        </div>
+    );
 }
 
 export default App;
