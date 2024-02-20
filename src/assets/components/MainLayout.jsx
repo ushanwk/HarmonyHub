@@ -1,5 +1,6 @@
 import {SearchBar} from "./SearchBar";
 import {PlayingNowBanner} from "./PlayingNowBanner";
+import {SongList} from "./SongList";
 
 export function MainLayout() {
     return (
@@ -7,8 +8,9 @@ export function MainLayout() {
 
             <SearchBar />
 
-            <div className="w-full mt-8 flex gap-10">
+            <div className="w-full mt-8 flex gap-8 max-lg:flex-col">
                 <PlayingNowBanner />
+                <SongList />
             </div>
 
         </section>
