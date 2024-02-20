@@ -1,6 +1,15 @@
 import rate from '../image/Rate.png';
+import songs from "../sample-songs";
+import {useState} from "react";
 
 export function SongList() {
+
+    const [selectedSong, setSelectedSong] = useState(0);
+    const toggleClickSongs = (index) => {
+        setSelectedSong(index);
+        console.log(selectedSong)
+    }
+
     return (
         <div className="w-full">
             <div className="flex justify-between">
@@ -10,7 +19,8 @@ export function SongList() {
                     <div className="flex gap-5">
                         <p className="font-bold max-2xl:text-[10px]">Rema</p>
                         <p className="text-[12px] max-2xl:text-[10px] max-2xl:mt-0 mt-1 font-semibold opacity-50">2022</p>
-                        <p className="text-[12px] max-2xl:text-[10px] max-2xl:mt-0 mt-1 font-semibold opacity-50">Rave & Roses</p>
+                        <p className="text-[12px] max-2xl:text-[10px] max-2xl:mt-0 mt-1 font-semibold opacity-50">Rave &
+                            Roses</p>
                     </div>
                 </div>
 
@@ -20,7 +30,25 @@ export function SongList() {
                 </div>
             </div>
 
+            <div className="mt-7 w-full">
 
+                {
+                    songs.map((s, index) => (
+                        <div
+                            className={`flex justify-between items-center py-1 px-4 rounded-[6px] mt-1 border-2 border-transparent hover:border-white ${selectedSong === index ? 'bg-black text-white' : undefined}`}
+                            onClick={() => toggleClickSongs(index)}
+                        >
+                            <div className="flex gap-4">
+                                <h1 className="font-semibold text-[14px]">{index + 1}</h1>
+                                <h1 className="font-semibold text-[14px]">Calm Down</h1>
+                            </div>
+
+                            <h1 className="font-semibold text-[14px]">4:50</h1>
+                        </div>
+                    ))
+                }
+
+            </div>
         </div>
     )
 }

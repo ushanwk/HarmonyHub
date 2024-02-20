@@ -4,10 +4,9 @@
     flex-direction: column;
     line-height: 1;
     font-family: inherit;
-    width: 100%;
+    width: 80%;
     padding: 25px 15px;
     background-color: transparent;
-    border-top: 4px solid white;
 }
 .rhap_container:focus:not(:focus-visible) {
     outline: 0;

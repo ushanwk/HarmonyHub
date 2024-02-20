@@ -18,7 +18,7 @@ function App() {
                     <MainLayout/>
                 </section>
 
-                <section className="w-full">
+                <section className="w-full flex items-center justify-center border-t-4 border-white pt-2">
                     <AudioPlayer
                         src="https://cdns-preview-1.dzcdn.net/stream/c-13039fed16a173733f227b0bec631034-12.mp3"
                         autoPlay={true}
