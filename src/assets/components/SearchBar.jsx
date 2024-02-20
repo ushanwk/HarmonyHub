@@ -1,6 +1,11 @@
 import search from '../image/Search.png';
+import {useState} from "react";
+import {tabs, tabName} from "../consts/tabs";
 
 export function SearchBar() {
+
+    const [ selectedTab, setSelectedTab ] = useState(5);
+
     return (
         <div className="flex gap-5 justify-between max-xl:flex-col">
             <div className="flex items-center bg-white w-[325px] p-1 pl-3 rounded-[10px] gap-2 border-[1px] max-xl:w-full">
@@ -11,25 +16,18 @@ export function SearchBar() {
             </div>
 
             <div className="flex gap-2">
-                <div
-                    className="flex items-center justify-center bg-white w-[80px] rounded-[10px] gap-2 hover:border-[1px] max-xl:h-[50px] max-xl:w-full">
-                    <p className="text-[12px] opacity-40 font-semibold cursor-default">Song</p>
-                </div>
 
-                <div
-                    className="flex items-center justify-center bg-white w-[80px] rounded-[10px] gap-2 hover:border-[1px] max-xl:h-[50px] max-xl:w-full">
-                    <p className="text-[12px] opacity-40 font-semibold cursor-default">Artist</p>
-                </div>
-
-                <div
-                    className="flex items-center justify-center bg-white w-[80px] rounded-[10px] gap-2 hover:border-[1px] max-xl:h-[50px] max-xl:w-full">
-                    <p className="text-[12px] opacity-40 font-semibold cursor-default">Album</p>
-                </div>
-
-                <div
-                    className="flex items-center justify-center bg-white w-[80px] rounded-[10px] gap-2 hover:border-[1px] max-xl:h-[50px] max-xl:w-full">
-                    <p className="text-[12px] opacity-40 font-semibold cursor-default">Playlist</p>
-                </div>
+                {
+                    tabName.map((name, index) => (
+                        <div
+                            className={`flex items-center justify-center bg-white w-[80px] rounded-[10px] gap-2 max-xl:h-[50px] max-xl:w-full ${selectedTab == index ? 'border-[2px]' : undefined}`}
+                            key={index}
+                            onClick={() => setSelectedTab(index)}
+                        >
+                            <p className="text-[12px] opacity-40 font-semibold cursor-default">{name}</p>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     )
