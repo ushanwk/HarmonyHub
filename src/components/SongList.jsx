@@ -21,19 +21,19 @@ export function SongList({selectedIndex, songList, setIndex}) {
                 <div className="flex flex-col mt-2">
                     <h1 className="text-[40px] font-bold max-2xl:text-[30px]">
                         {
-                            songList.length === 0 ? <p>Loading</p> : songList.data[selectedSong].title_short
+                            songList.length === 0 ? <p>Loading</p> : songList.data[selectedSong].title_short.slice(0,14) + '...'
                         }
                     </h1>
 
                     <div className="flex gap-5">
                         <p className="font-bold max-2xl:text-[10px]">
                             {
-                                songList.length === 0 ? null : songList.data[selectedSong].artist.name
+                                songList.length === 0 ? null : songList.data[selectedSong].artist.name.slice(0,15) + '...'
                             }
                         </p>
                         <p className="text-[12px] max-2xl:text-[10px] max-2xl:mt-0 mt-1 font-semibold opacity-50">
                             {
-                                songList.length === 0 ? null : songList.data[selectedSong].album.title
+                                songList.length === 0 ? null : songList.data[selectedSong].album.title.slice(0,15) + '...'
                             }
                         </p>
                     </div>

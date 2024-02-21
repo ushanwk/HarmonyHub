@@ -13,8 +13,10 @@ export function MainLayout({ set }) {
 
     const [ selectedIndex, setSelectedIndex ] = useState(0);
 
+    const [ searchedSong, setSearchedSong ] = useState('danith sri');
+
     useEffect(() => {
-        search('danith sri').then(res => {
+        search(searchedSong).then(res => {
 
             const md5Image = res.data.data[selectedIndex].md5_image;
             const imageUrl = `https://e-cdns-images.dzcdn.net/images/cover/${md5Image}/500x500.jpg`;
@@ -27,12 +29,12 @@ export function MainLayout({ set }) {
         }).catch(er => {
             console.log(er);
         })
-    }, [selectedIndex]);
+    }, [selectedIndex, searchedSong]);
 
     return (
         <section className="w-9/12 mb-12">
 
-            <SearchBar/>
+            <SearchBar set={setSearchedSong} />
 
             <div className="w-full mt-8 flex gap-8 max-lg:flex-col">
                 <PlayingNowBanner img={imageUrl} />

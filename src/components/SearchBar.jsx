@@ -2,15 +2,15 @@ import search from '../assets/image/Search.png';
 import {useState} from "react";
 import {tabName} from "../assets/consts/tabs";
 
-export function SearchBar() {
+export function SearchBar({ set }) {
 
     const [ selectedTab, setSelectedTab ] = useState(5);
 
-
     const [searchValue, setSearchValue] = useState('');
+
     const handleKeyDownSearch = (event) => {
         if (event.key === 'Enter') {
-
+            set(event.target.value);
         }
     };
 

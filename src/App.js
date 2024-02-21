@@ -16,7 +16,7 @@ function App() {
             <section
                 className="w-[65%] bg-white rounded-[20px] bg-[url('assets/image/SecBg.png')] bg-cover border-4 border-white shadow-xl">
 
-                <Header/>
+                <Header />
 
                 <section className="w-full flex justify-center mt-5">
                     <MainLayout set={setSong} />
