@@ -1,10 +1,18 @@
-import search from '../image/Search.png';
+import search from '../assets/image/Search.png';
 import {useState} from "react";
-import {tabs, tabName} from "../consts/tabs";
+import {tabName} from "../assets/consts/tabs";
 
 export function SearchBar() {
 
     const [ selectedTab, setSelectedTab ] = useState(5);
+
+
+    const [searchValue, setSearchValue] = useState('');
+    const handleKeyDownSearch = (event) => {
+        if (event.key === 'Enter') {
+
+        }
+    };
 
     return (
         <div className="flex gap-5 justify-between max-xl:flex-col">
@@ -12,7 +20,11 @@ export function SearchBar() {
                 <img src={search} className="w-4 h-4 opacity-40"/>
                 <input
                     className="p-1 text-[13px] w-[300px] border border-white focus:outline-none focus:border-white sm:text-sm hover:border-transparent"
-                    type="text" placeholder="Search for song, artist etc..."/>
+                    type="text" placeholder="Search for song, artist etc..."
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                    onKeyDown={handleKeyDownSearch}
+                />
             </div>
 
             <div className="flex gap-2">

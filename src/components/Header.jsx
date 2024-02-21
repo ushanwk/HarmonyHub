@@ -1,7 +1,7 @@
-import logo from '../image/Logo.png';
-import profile from '../image/Profile.png';
-import notification from '../image/NotificationIcon.png';
-import setting from '../image/Setting.png';
+import logo from '../assets/image/Logo.png';
+import profile from '../assets/image/Profile.png';
+import notification from '../assets/image/NotificationIcon.png';
+import setting from '../assets/image/Setting.png';
 
 export function Header() {
     return (
