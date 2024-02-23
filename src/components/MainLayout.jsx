@@ -17,15 +17,11 @@ export function MainLayout({ set }) {
 
     useEffect(() => {
         search(searchedSong).then(res => {
-
             const md5Image = res.data.data[selectedIndex].md5_image;
             const imageUrl = `https://e-cdns-images.dzcdn.net/images/cover/${md5Image}/500x500.jpg`;
             setImageUrl(imageUrl);
-
             setResult(res.data);
-
             set(res.data.data[selectedIndex].preview);
-
         }).catch(er => {
             console.log(er);
         })

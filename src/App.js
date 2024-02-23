@@ -11,7 +11,7 @@ function App() {
     const [ song, setSong ] = useState('');
 
     return (
-        <div className="App w-full bg-[url('assets/image/Bg.png')] bg-cover flex items-center justify-center pb-[50px] pt-[50px]">
+        <div className="App w-full bg-[url('assets/image/Bg.png')] bg-cover flex items-center justify-center pb-[110px] pt-[50px]">
 
             <section
                 className="w-[65%] bg-white rounded-[20px] bg-[url('assets/image/SecBg.png')] bg-cover border-4 border-white shadow-xl">

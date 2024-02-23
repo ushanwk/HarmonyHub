@@ -11,9 +11,11 @@ export function SongList({selectedIndex, songList, setIndex}) {
         setIndex(index);
     }
 
-    useEffect(() => {
-        console.log(songList)
-    }, [songList]);
+    function formatTime(seconds) {
+        let minutes = Math.floor(seconds / 60);
+        let remainingSeconds = seconds % 60;
+        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+    }
 
     return (
         <div className="w-full">
@@ -64,7 +66,7 @@ export function SongList({selectedIndex, songList, setIndex}) {
                                         <h1 className="font-semibold text-[14px]">{index + 1}</h1>
                                         <h1 className="font-semibold text-[14px]">{s.title_short}</h1>
                                     </div>
-                                    <h1 className="font-semibold text-[14px]">4:50</h1>
+                                    <h1 className="font-semibold text-[14px]">{formatTime(s.duration)}</h1>
                                 </div>
                             )
                         ))
