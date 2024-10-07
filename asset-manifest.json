@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/HarmonyHub/static/css/main.f4d0efa8.css",
+    "main.js": "/HarmonyHub/static/js/main.f391ed6e.js",
+    "static/js/453.ad5cb371.chunk.js": "/HarmonyHub/static/js/453.ad5cb371.chunk.js",
+    "static/media/SongBanner.png": "/HarmonyHub/static/media/SongBanner.e4997db7a066e407d08b.png",
+    "static/media/SecBg.png": "/HarmonyHub/static/media/SecBg.5d109b263f17f56d6cfe.png",
+    "static/media/Profile.png": "/HarmonyHub/static/media/Profile.fcc444104f8e770fda93.png",
+    "static/media/Bg.png": "/HarmonyHub/static/media/Bg.a03e0cee67bad4553958.png",
+    "static/media/Setting.png": "/HarmonyHub/static/media/Setting.9f8ca2259ad452aa8441.png",
+    "static/media/Logo.png": "/HarmonyHub/static/media/Logo.619490b1825b958802f3.png",
+    "static/media/NotificationIcon.png": "/HarmonyHub/static/media/NotificationIcon.2230bda1dc6df720f5d5.png",
+    "static/media/Shuffle.png": "/HarmonyHub/static/media/Shuffle.1326ad9ecf2ee8146241.png",
+    "index.html": "/HarmonyHub/index.html",
+    "main.f4d0efa8.css.map": "/HarmonyHub/static/css/main.f4d0efa8.css.map",
+    "main.f391ed6e.js.map": "/HarmonyHub/static/js/main.f391ed6e.js.map",
+    "453.ad5cb371.chunk.js.map": "/HarmonyHub/static/js/453.ad5cb371.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4d0efa8.css",
+    "static/js/main.f391ed6e.js"
+  ]
+}
