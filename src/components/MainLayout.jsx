@@ -13,7 +13,7 @@ export function MainLayout({ set }) {
 
     const [ selectedIndex, setSelectedIndex ] = useState(0);
 
-    const [ searchedSong, setSearchedSong ] = useState('danith sri');
+    const [ searchedSong, setSearchedSong ] = useState('Charitha attalage');
 
     useEffect(() => {
         search(searchedSong).then(res => {
